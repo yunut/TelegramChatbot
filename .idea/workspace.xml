@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38b7e7fb-4ee8-4acb-9166-68a9d4872e46" name="Changes" comment="Development of Telegram Chatbot Initial Configuration">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/ChatbotApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/config/ConfigInitialize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/ChatbotApplicationTests.java" afterDir="false" />
+    <list default="true" id="38b7e7fb-4ee8-4acb-9166-68a9d4872e46" name="Changes" comment="Change the development environment to spring boot&#10;&#10;separate the properties value&#10;&#10;dotenv lib remove">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/config/ConfigGyeongGiBusApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/ChatbotApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/ChatbotApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/config/ConfigInitialize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +38,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.ChatbotApplication">
     <configuration name="ChatbotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jysdev.chatbot.ChatbotApplication" />
       <module name="chatbot" />
@@ -80,6 +71,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ChatbotApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="chatbot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jysdev.chatbot.ChatbotApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ChatbotApplication" />
@@ -94,8 +92,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663826907467</updated>
-      <workItem from="1663826909284" duration="4459000" />
+      <workItem from="1663826909284" duration="7499000" />
+      <workItem from="1663924335386" duration="3511000" />
+      <workItem from="1663932549338" duration="3240000" />
     </task>
+    <task id="LOCAL-00001" summary="Development of Telegram Chatbot Initial Configuration">
+      <created>1663831456406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663831456406</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +122,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Development of Telegram Chatbot Initial Configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Development of Telegram Chatbot Initial Configuration" />
+    <MESSAGE value="Change the development environment to spring boot&#10;&#10;separate the properties value&#10;&#10;dotenv lib remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the development environment to spring boot&#10;&#10;separate the properties value&#10;&#10;dotenv lib remove" />
   </component>
 </project>
