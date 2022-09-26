@@ -1,5 +1,6 @@
 package com.jysdev.chatbot.handler;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -10,6 +11,9 @@ public class ChatbotHandler extends TelegramLongPollingBot {
 
     private final String userName;
     private final String token;
+
+    @Autowired
+    private GyeongGiBusStationHandler gyeongGiBusStationHandler;
 
     public ChatbotHandler(@Value("${telegram.chatbot.userName}") String userName, @Value("${telegram.chatbot.token}") String token) {
         this.userName = userName;
@@ -29,7 +33,7 @@ public class ChatbotHandler extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
         //TODO 명령어 입력에 따른 api 로직 분기
-        System.out.println(update.getMessage().getText());
+        gyeongGiBusStationHandler.busStationSearch(update.getMessage().getText());
 
     }
 }

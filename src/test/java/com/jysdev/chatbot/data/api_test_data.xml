@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+    <comMsgHeader/>
+    <msgHeader>
+        <queryTime>2022-09-26 15:58:43.800</queryTime>
+        <resultCode>0</resultCode>
+        <resultMessage>정상적으로 처리되었습니다.</resultMessage>
+    </msgHeader>
+    <msgBody>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11255</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000241</stationId>
+            <stationName>신중동역1번출구.꿈마을.삼환아파트</stationName>
+            <x>126.7794</x>
+            <y>37.5023667</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11240</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000169</stationId>
+            <stationName>신중동역2번출구.원미경찰서.롯데백화점</stationName>
+            <x>126.7770667</x>
+            <y>37.5009667</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11435</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000164</stationId>
+            <stationName>신중동역3번출구.롯데백화점</stationName>
+            <x>126.7725333</x>
+            <y>37.5032333</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11238</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000453</stationId>
+            <stationName>신중동역3번출구.원미경찰서.롯데백화점</stationName>
+            <x>126.7763667</x>
+            <y>37.50155</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11207</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000163</stationId>
+            <stationName>신중동역4번출구.롯데백화점</stationName>
+            <x>126.7728833</x>
+            <y>37.5037</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11228</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000105</stationId>
+            <stationName>신중동역5번출구.중흥중학교</stationName>
+            <x>126.7753833</x>
+            <y>37.5052667</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11229</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000168</stationId>
+            <stationName>신중동역6번출구.중흥중학교</stationName>
+            <x>126.7757667</x>
+            <y>37.5054667</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11253</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000107</stationId>
+            <stationName>신중동역7번출구.심원고교.삼환아파트.중3주민지원센터</stationName>
+            <x>126.7789667</x>
+            <y>37.5029333</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11137</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000042</stationId>
+            <stationName>신중동행정복지센터.고용노동지청</stationName>
+            <x>126.7638167</x>
+            <y>37.5068333</y>
+        </busStationList>
+        <busStationList>
+            <centerYn>N</centerYn>
+            <districtCd>2</districtCd>
+            <mobileNo> 11138</mobileNo>
+            <regionName>부천</regionName>
+            <stationId>210000329</stationId>
+            <stationName>신중동행정복지센터.고용노동지청</stationName>
+            <x>126.76335</x>
+            <y>37.5063833</y>
+        </busStationList>
+    </msgBody>
+</response>
