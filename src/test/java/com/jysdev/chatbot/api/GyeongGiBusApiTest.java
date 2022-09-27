@@ -1,5 +1,6 @@
 package com.jysdev.chatbot.api;
 
+import com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.BusStationInfo;
 import com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.Response;
 import com.jysdev.chatbot.handler.GyeongGiBusStationHandler;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,20 +40,33 @@ public class GyeongGiBusApiTest {
         String searchStationName = "신중동";
 
         // when
-        Response response = gyeongGiBusStationHandler.busStationSearch(searchStationName);
+        BusStationInfo busStationInfos = gyeongGiBusStationHandler.busStationSearch(searchStationName);
 
         // then
-        assertNotNull(response);
+        assertNotNull(busStationInfos);
     }
 
     @Test
-    @DisplayName("API CAll 테스트")
-    void 경기_API_CALL_테스트() {
+    @DisplayName("정류소 검색 API CAll 테스트")
+    void 경기_정류소_검색_API_CALL_테스트() {
         // given
         String searchStationName = "신중동";
 
         // when
-        String msgBody = gyeongGiBusStationHandler.busStationInquireApiCall(searchStationName);
+        String msgBody = gyeongGiBusStationHandler.busStationSearchApiCall(searchStationName);
+
+        // then
+        assertNotNull(msgBody);
+    }
+
+    @Test
+    @DisplayName("정류소 노선 검색 API CAll 테스트")
+    void 경기_정류소_노선검색_API_CALL_테스트() {
+        // given
+        long searchStationId = 233001450;
+
+        // when
+        String msgBody = gyeongGiBusStationHandler.busRouteNumberByStationIdApiCall(searchStationId);
 
         // then
         assertNotNull(msgBody);
@@ -77,8 +91,8 @@ public class GyeongGiBusApiTest {
 
         // then
         assertNotNull(response);
-        assertNotNull(response.getMsgBody().getBusStationLists());
-        assertEquals(10, response.getMsgBody().getBusStationLists().length);
+        assertNotNull(response.getMsgBody().getBusStationInfos());
+        assertEquals(10, response.getMsgBody().getBusStationInfos().length);
     }
 
 }
