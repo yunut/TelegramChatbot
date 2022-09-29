@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38b7e7fb-4ee8-4acb-9166-68a9d4872e46" name="Changes" comment="Add API linkage to find stops around Gyeonggi-do&#10; - Add API call&#10; - Add response(xml) To Entity">
+    <list default="true" id="38b7e7fb-4ee8-4acb-9166-68a9d4872e46" name="Changes" comment="Added linkage API &#10;- Kakao place finding api &#10;- odsay public transportation route finding api">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/BusArriveInfo.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/BusStationRouteInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/kakao/api/map/Document.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/kakao/api/map/Meta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/kakao/api/map/SameName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/kakao/api/map/kakaoMapApiRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/Lane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/OdsaySearchDirectionApiRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/PassStopList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/Path.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/Station.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/SubPath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/PublicTransportHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/PublicTransportHandlerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/seoul/api/subway/arrive/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/seoul/api/subway/arrive/RealtimeArrivalList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/seoul/api/subway/arrive/SeoulSubwayArriveInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/telegram/message/PublicStationDirectionMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/telegram/message/WayPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/BusStationList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/BusStationInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/MsgBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/gyeonggibusapi/searchStation/MsgBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/OdsaySearchDirectionApiRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/OdsaySearchDirectionApiRoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/SubPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/dto/odsay/api/searchdirections/SubPath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/GyeongGiBusStationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/GyeongGiBusStationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/GyeongGiBusApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/GyeongGiBusApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/PublicTransportHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/PublicTransportHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/PublicTransportHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/PublicTransportHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,24 +59,8 @@
     &quot;spring.configuration.checksum&quot;: &quot;00f2b1ead3a0990b818517356cb40280&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PublicTransportHandlerTest.오디세이_대중교통_길찾기_API_테스트">
-    <configuration name="GyeongGiBusApiTest.경기_API_CALL_테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="chatbot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.jysdev.chatbot.api.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.jysdev.chatbot.api" />
-      <option name="MAIN_CLASS_NAME" value="com.jysdev.chatbot.api.GyeongGiBusApiTest" />
-      <option name="METHOD_NAME" value="경기_API_CALL_테스트" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GyeongGiBusApiTest.경기_데이터_파싱_테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.ChatbotApplication">
+    <configuration name="GyeongGiBusApiTest.경기_데이터_파싱_테스트" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="chatbot" />
       <extension name="coverage">
         <pattern>
@@ -109,6 +87,22 @@
       <option name="PACKAGE_NAME" value="com.jysdev.chatbot.api" />
       <option name="MAIN_CLASS_NAME" value="com.jysdev.chatbot.api.GyeongGiBusApiTest" />
       <option name="METHOD_NAME" value="경기_정류소_노선검색_API_CALL_테스트" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PublicTransportHandlerTest.대중교통_길찾기_테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatbot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jysdev.chatbot.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jysdev.chatbot.api" />
+      <option name="MAIN_CLASS_NAME" value="com.jysdev.chatbot.api.PublicTransportHandlerTest" />
+      <option name="METHOD_NAME" value="대중교통_길찾기_테스트" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +160,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PublicTransportHandlerTest.대중교통_길찾기_테스트" />
         <item itemvalue="JUnit.PublicTransportHandlerTest.오디세이_대중교통_길찾기_API_테스트" />
         <item itemvalue="JUnit.PublicTransportHandlerTest.카카오_키워드검색_API_테스트" />
-        <item itemvalue="JUnit.GyeongGiBusApiTest.경기_데이터_파싱_테스트" />
         <item itemvalue="JUnit.GyeongGiBusApiTest.경기_정류소_노선검색_API_CALL_테스트" />
-        <item itemvalue="JUnit.GyeongGiBusApiTest.경기_API_CALL_테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +180,12 @@
       <workItem from="1663932549338" duration="4365000" />
       <workItem from="1663991273388" duration="5927000" />
       <workItem from="1664169769805" duration="15627000" />
-      <workItem from="1664256541156" duration="19768000" />
+      <workItem from="1664256541156" duration="19942000" />
+      <workItem from="1664350864413" duration="4779000" />
+      <workItem from="1664360862295" duration="4390000" />
+      <workItem from="1664374603282" duration="599000" />
+      <workItem from="1664431833499" duration="13639000" />
+      <workItem from="1664450941579" duration="757000" />
     </task>
     <task id="LOCAL-00001" summary="Development of Telegram Chatbot Initial Configuration">
       <created>1663831456406</created>
@@ -210,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664190965645</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added linkage API &#10;- Kakao place finding api &#10;- odsay public transportation route finding api">
+      <created>1664284730990</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664284730991</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,25 +236,32 @@
     <MESSAGE value="Development of Telegram Chatbot Initial Configuration" />
     <MESSAGE value="Change the development environment to spring boot&#10;&#10;separate the properties value&#10;&#10;dotenv lib remove" />
     <MESSAGE value="Add API linkage to find stops around Gyeonggi-do&#10; - Add API call&#10; - Add response(xml) To Entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add API linkage to find stops around Gyeonggi-do&#10; - Add API call&#10; - Add response(xml) To Entity" />
+    <MESSAGE value="Added linkage API &#10;- Kakao place finding api &#10;- odsay public transportation route finding api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added linkage API &#10;- Kakao place finding api &#10;- odsay public transportation route finding api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java</url>
-          <line>72</line>
+          <line>90</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/jysdev/chatbot/api/PublicTransportHandlerTest.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="9" />
+          <line>60</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jysdev/chatbot/handler/ChatbotHandler.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="com.jysdev.chatbot.dto.odsay.api.searchdirections.Result" memberName="outTrafficCheck" />
         <PinnedItemInfo parentTag="com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.Response" memberName="msgBody" />
         <PinnedItemInfo parentTag="com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.MsgHeader" memberName="queryTime" />
         <PinnedItemInfo parentTag="com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.Response" memberName="msgHeader" />

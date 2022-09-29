@@ -12,6 +12,15 @@ public class SubPath {
     private int sectionTime;
     private int stationCount;
     private ArrayList<Lane> lane;
+    private String name;
+    private String busNo;
+    private int type;
+    private int busId;
+    private String busLocalBlID;
+    private String busCityCode;
+    private int busProviderCode;
+    private int subwayCode;
+    private int subwayCityCode;
     private String startName;
     private double startX;
     private double startY;
