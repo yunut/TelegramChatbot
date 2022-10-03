@@ -1,8 +1,5 @@
 package com.jysdev.chatbot.handler;
 
-import com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.BusArriveInfo;
-import com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.BusStationInfo;
-import com.jysdev.chatbot.dto.gyeonggibusapi.searchStation.BusStationRouteInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -19,9 +16,6 @@ public class ChatbotHandler extends TelegramLongPollingBot {
 
     private final String userName;
     private final String token;
-
-    @Autowired
-    private GyeongGiBusStationHandler gyeongGiBusStationHandler;
 
     @Autowired
     private PublicTransportHandler publicTransportHandler;
