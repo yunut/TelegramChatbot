@@ -65,7 +65,7 @@ public class SeoulSubwayInfoHandler {
 
         for(RealtimeArrivalList arrival : seoulSubwayArriveInfo.getRealtimeArrivalList()) {
             total_message += String.format("```");
-            total_message += String.format("%s / %s\n", arrival.trainLineNm, arrival.arvlMsg2);
+            total_message += String.format(" %s / %s\n", arrival.trainLineNm, arrival.arvlMsg2);
             total_message += String.format("```");
         }
 
