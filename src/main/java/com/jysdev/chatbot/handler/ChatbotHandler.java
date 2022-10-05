@@ -20,6 +20,9 @@ public class ChatbotHandler extends TelegramLongPollingBot {
     @Autowired
     private PublicTransportHandler publicTransportHandler;
 
+    @Autowired
+    SeoulSubwayInfoHandler seoulSubwayInfoHandler;
+
     public ChatbotHandler(@Value("${telegram.chatbot.userName}") String userName, @Value("${telegram.chatbot.token}") String token) {
         this.userName = userName;
         this.token = token;
@@ -38,10 +41,6 @@ public class ChatbotHandler extends TelegramLongPollingBot {
     public void onUpdateReceived(Update update) {
 
         //TODO 명령어 입력에 따른 api 로직 분기
-
- /*       String message = update.getMessage().getText();
-        String[] messageSplit = message.split(" ");
-        busApiProcess(messageSplit[0],messageSplit[1]);*/
         String message = update.getMessage().getText();
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(update.getMessage().getChatId());
@@ -55,10 +54,19 @@ public class ChatbotHandler extends TelegramLongPollingBot {
             sendMessage.enableMarkdown(true);
             sendMessage.setParseMode("MarkdownV2");
             sendMessage.setText(publicStationDirectionMessage);
-            System.out.println(publicStationDirectionMessage);
-        } else if(update.getMessage().toString().startsWith("/지하철")) {
+        } else if(message.startsWith("/지하철")) {
             // 검색한 지하철 역의 열차 남은 시간과 목적지
+            String stationName = message.replace("/지하철", "").trim();
 
+            if(stationName.endsWith("역")) {
+                stationName = stationName.substring(0,stationName.length()-1);
+            }
+
+            String seoulSubwayInfoMessage = seoulSubwayInfoHandler.seoulSubwayArriveInfo(stationName);
+
+            sendMessage.enableMarkdown(true);
+            sendMessage.setParseMode("MarkdownV2");
+            sendMessage.setText(seoulSubwayInfoMessage);
         };
 
         try {
@@ -68,26 +76,4 @@ public class ChatbotHandler extends TelegramLongPollingBot {
         }
 
     }
-
-
-    /*
-    public void busApiProcess(String startStationName, String arriveStationName) {
-        // 버스 정류장 검색
-        BusStationInfo startStationInfo = gyeongGiBusStationHandler.busStationSearch(startStationName);
-        BusStationInfo arriveStationInfo = gyeongGiBusStationHandler.busStationSearch(arriveStationName);
-
-        // 검색된 최상단 정류장의 노선 검색
-        BusStationRouteInfo[] startBusStationRouteInfos = gyeongGiBusStationHandler.busRouteNumberSearch(startStationInfo.getStationId());
-        BusStationRouteInfo[] arriveBusStationRouteInfos = gyeongGiBusStationHandler.busRouteNumberSearch(arriveStationInfo.getStationId());
-        List<BusStationRouteInfo> targetBusNumberList = gyeongGiBusStationHandler.targetBusNumberList(startBusStationRouteInfos, arriveBusStationRouteInfos);
-
-        // 해당 번호의 출발지 도착 시간 검색
-        BusArriveInfo[] busArriveInfos = gyeongGiBusStationHandler.busArriveInfoSearch(startStationInfo.getStationId());
-        for(BusArriveInfo busArriveInfo : busArriveInfos) {
-            // 차량번호, 첫번쨰 차량 도착정보, 두번쨰 차량 도착정보 (출발 정류소 이름, 도착 정류소 이름) 출력
-        }
-
-        // 챗봇 출력 데이터 가공
-    }
-     */
 }

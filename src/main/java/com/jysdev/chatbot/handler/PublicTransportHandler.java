@@ -36,6 +36,12 @@ public class PublicTransportHandler {
         this.odsayAPISecrectKey = odsayAPISecrectKey;
     }
 
+    /**
+     * 출발지에서 목적지 길찾기
+     * @param start
+     * @param dest
+     * @return
+     */
     public String publicStationDirection(String start, String dest) {
 
         // 출발지, 목적지의 위,경도를 구함
@@ -98,6 +104,11 @@ public class PublicTransportHandler {
         return telegram_message;
     }
 
+    /**
+     * 카카오 지역 좌표 검색 API 요청
+     * @param keyword
+     * @return
+     */
     public kakaoMapApiRoot kakaoKeywordSearchPlaceApiCall(String keyword) {
         URI uri = UriComponentsBuilder.fromUriString(kakaoKeywordSearchPlaceURL)
                 .queryParam("query", keyword)
@@ -122,6 +133,14 @@ public class PublicTransportHandler {
         return rawResult.getBody();
     }
 
+    /**
+     * 좌표 기반의 출발지에서 목적지까지 경로 탐색 API 요청
+     * @param sX
+     * @param sY
+     * @param eX
+     * @param eY
+     * @return
+     */
     public OdsaySearchDirectionApiRoot odsayPublicTransportdirectionApiCall(String sX, String sY, String eX, String eY) {
         URI uri = UriComponentsBuilder.fromUriString(odsayPublicTransportDirection)
                 .queryParam("apiKey", odsayAPISecrectKey)
@@ -134,7 +153,6 @@ public class PublicTransportHandler {
                 .encode()
                 .build()
                 .toUri();
-        System.out.println(uri.toString());
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -149,6 +167,13 @@ public class PublicTransportHandler {
         return rawResult.getBody();
     }
 
+    /**
+     * API Rresponse 메시지 가공
+     * @param messages
+     * @param start
+     * @param dest
+     * @return
+     */
     public String messageManufacture(ArrayList<PublicStationDirectionMessage> messages, String start, String dest) {
 
         String total_message = new String();
@@ -165,7 +190,6 @@ public class PublicTransportHandler {
                     total_message += String.format("```");
                     total_message += String.format("ㅇ " + EmojiParser.parseToUnicode(":train2:" + " %s역 \\-\\> %s역(%s)\n"), wayPoint.getBoardingStation(), wayPoint.getStopoverStation(), wayPoint.getTypeInfo().replaceAll("수도권", "").trim());
                     total_message += String.format(" \\- %s정거장 후 하차 / 소요시간: %s분\n\n", wayPoint.getStationCount(), wayPoint.getTime());
-
                     total_message += String.format("```");
                 } else if(type.equals(TrafficType.BUS.getName())) {
                     total_message += String.format("```");
