@@ -11,7 +11,7 @@ import org.yaml.snakeyaml.Yaml;
 import java.io.FileReader;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SeoulSubwayHandlerTest {
 
@@ -32,8 +32,8 @@ public class SeoulSubwayHandlerTest {
     @Test
     @DisplayName("서울 지하철 도착 API 테스트")
     void 서울_지하철_도착_API_테스트() {
-        SeoulSubwayArriveInfo info = seoulSubwayInfoHandler.seoulSubwayArriveInfoApiCall("신중동");
 
-        assertNotNull(info);
+        SeoulSubwayArriveInfo info = seoulSubwayInfoHandler.seoulSubwayArriveInfoApiCall("신중동");
+        assertNotEquals(info.getRealtimeArrivalList().size(), 0);
     }
 }

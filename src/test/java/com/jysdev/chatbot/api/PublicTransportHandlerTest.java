@@ -59,6 +59,6 @@ public class PublicTransportHandlerTest {
     @Test
     void 대중교통_길찾기_테스트() {
        String message = publicTransportHandler.publicStationDirection("신중동역", "보라매역");
-       System.out.println(message);
+       assertNotNull(message);
     }
 }

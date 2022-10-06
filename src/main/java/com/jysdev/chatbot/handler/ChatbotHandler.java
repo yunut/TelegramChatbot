@@ -1,5 +1,6 @@
 package com.jysdev.chatbot.handler;
 
+import com.vdurmont.emoji.EmojiParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -68,6 +69,20 @@ public class ChatbotHandler extends TelegramLongPollingBot {
             sendMessage.setParseMode("MarkdownV2");
             sendMessage.setText(seoulSubwayInfoMessage);
         };
+
+        // 지원하지 않는 명령어가 들어왔을 시 도움말 처리
+        if(sendMessage.getText() == null) {
+            String infoMessage = "";
+            infoMessage += String.format("ㅇ 현재 지원 명령어\n\n");
+            infoMessage += String.format("*/길찾기* \\- 출발지에서 목적지까지 대중교통 최적 경로를 탐색합니다\\.\n");
+            infoMessage += String.format("  예\\) /길찾기 부천시청 여의도물빛공원\n\n");
+            infoMessage += String.format("*/지하철* \\- 지정한 역의 지하철 도착 예정시간을 알려줍니다\\.\n");
+            infoMessage += String.format("  예\\) /지하철 부천시청역\n");
+
+            sendMessage.enableMarkdown(true);
+            sendMessage.setParseMode("MarkdownV2");
+            sendMessage.setText(infoMessage);
+        }
 
         try {
             execute(sendMessage);
