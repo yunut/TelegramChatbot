@@ -1,7 +1,6 @@
 package com.jysdev.chatbot.api;
 
 import com.jysdev.chatbot.dto.seoul.api.subway.arrive.SeoulSubwayArriveInfo;
-import com.jysdev.chatbot.handler.PublicTransportHandler;
 import com.jysdev.chatbot.handler.SeoulSubwayInfoHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

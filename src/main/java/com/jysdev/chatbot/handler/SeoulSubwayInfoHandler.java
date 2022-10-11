@@ -1,11 +1,7 @@
 package com.jysdev.chatbot.handler;
 
-import com.jysdev.chatbot.dto.kakao.api.map.kakaoMapApiRoot;
 import com.jysdev.chatbot.dto.seoul.api.subway.arrive.RealtimeArrivalList;
 import com.jysdev.chatbot.dto.seoul.api.subway.arrive.SeoulSubwayArriveInfo;
-import com.jysdev.chatbot.dto.telegram.message.PublicStationDirectionMessage;
-import com.jysdev.chatbot.dto.telegram.message.WayPoint;
-import com.vdurmont.emoji.EmojiParser;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
